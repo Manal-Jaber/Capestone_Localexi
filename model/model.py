@@ -26,10 +26,10 @@ class EnglishArabicTranslator:
 
     def predict(self, sentence):
         #From Data
-        max_eng = 15
-        max_fr = 21
+        max_eng = 16
+        max_ar = 12
         #Sentence preparation
-        y_id_to_word = {value: key for key, value in self.fr_tokenizer.word_index.items()}
+        y_id_to_word = {value: key for key, value in self.ar_tokenizer.word_index.items()}
         y_id_to_word[0] = '<PAD>'
         sentence = self.eng_tokenizer.texts_to_sequences([sentence])
         sentence = pad_sequences(sentence, maxlen=max_eng, padding='post')

@@ -4,9 +4,31 @@
     </head>
     <body>
         <header class="header">
-            <h1>Localexi</h1>
-            <h2>IPH Studios</h2>
-            <h3>By Manal Jaber and Sarah Hammoud</h3>
+            <img src="../static/iph_logo.png" alt="logo"/>
+            <div class="header-text">
+                <div class="company-details">
+                    <h1>Localexi</h1>
+                    <p>Manal Jaber & Sarah Hammoud</p>
+                </div>
+                <div class="nav">
+                    <a href="/">Home</a>
+                    <a href="/docs">Docs</a>
+                </div>
+            </div>
         </header>
+        <div class="wrapper">
+            <aside class="aside">
+                <p>Can't find your favorite show's latest episode in Arabic.</p>
+                <p>Enter any English srt file</p>
+                <p>Get the Arabic version.</p>
+            </aside>
+            <article class="article">
+                <p>Enter your English srt file here:</p>
+                <form action="/result" method="POST" enctype = "multipart/form-data">
+                    <input id="english-file" type="file" name="english-file"/>
+                    <input type = "submit"/>
+                </form>
+            </article>
+        </div>
     </body>
 </html>
